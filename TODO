@@ -1,0 +1,22 @@
+FLOW LOGIN: 
+  ✔ /start aksi akan reply selamat datang dan meminta untuk login @done(23-01-03 08:42)
+  ✔ /login#Password jika berhasil reply cara whitelist ip, jika gagal reply untuk meminta login @done(23-01-03 08:42)
+  ✔ setelah berhasil update data pada STATUS_USER @done(23-01-03 08:52)
+
+FLOW ADD WHITELIST:
+  ✔ WHITELIST#NAMA#ADDRESS aksi akan mencek apakah NAMA dan ADDRESS sudah tersedia @done(23-01-03 08:57)
+  ✔ Jika sudah ada, reply message sudah dengan pesan yang mengandung cara update @done(23-01-03 08:57)
+  ✔ Jika belum ada, reply button untuk konfirmasi apakah akan menambahkan ADDRESS @done(23-01-03 08:57)
+  ✔ Jika user terdeteksi tidak login maka akan gagal reply untuk meminta login @done(23-01-03 10:50)
+  ✔ Reply konfirmasi Ya, Lanjut, akan mencek apakah user benar - benar sudah login @done(23-01-03 10:51)
+  ✔ Reply konfirmasi Tidak, Keluar akan menghapus data STATUS_USER @done(23-01-03 11:57)
+  ✔ Jika sudah dapatkan data dari STATUS_USER untuk membuat actionLog bahwa DATE-USER-AKSI-NAMA-ADDRESS @done(23-01-03 11:40)
+  ✔ Reply success dari whitelist ip @done(23-01-03 11:40)
+
+FLOW EDIT WHITELIST:
+  ✔ Aksi 1 Ya, Ubah. Akan merespon format untuk cara edit @done(23-01-03 13:25)
+  ✔ Aksi 2 UBAH#nama_old#ip_old=nama_baru#ip_baru @done(23-01-03 13:25)
+  ✔ jika ip yang akan diubah tidak ada akan mengirim error ke telegram @done(23-01-03 13:25)
+  ✔ jika ip yang akan diubah ada tetapi ip baru sudah terlist maka akan mengirim message seperti saat verify whitelist @done(23-01-03 13:25)
+  ☐ 
+
